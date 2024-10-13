@@ -35,6 +35,7 @@
 1. 由于AMD核显驱动问题，Chrome浏览器必须进设置→系统关闭图形加速，不然会卡的怀疑人生，Safari正常。需要等[NootedRed](https://github.com/ChefKissInc/NootedRed)解决。其他一些软件也可能出现兼容性问题。
 2. VDA解码器不支持。
 3. 无法自定义风扇转速。
+4. 设置的关于页面，CPU型号可能识别成5500U（第三方工具正常）。
 
 ## 截图
 
