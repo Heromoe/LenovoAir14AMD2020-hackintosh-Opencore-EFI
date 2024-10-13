@@ -1,11 +1,11 @@
 # **联想小新Air14 2020锐龙版 黑苹果EFI**
 
-在原项目 https://github.com/dh374374/Air14-2020-hackintosh-Opencore-EFI 的基础上稍微改了改+升级OC和kext，感谢
+在原项目 https://github.com/dh374374/Air14-2020-hackintosh-Opencore-EFI 的基础上稍微改了改+升级OC和kext，感谢  
 OpenCore版本：1.0.2
 
 ## 可用系统
 
-除macOS 15外，近几代应该都可以使用。
+除macOS 15外，近几代应该都可以使用。  
 已经过测试：
 ### macOS 13 Ventura
 ### macOS 14 Sonoma
@@ -37,7 +37,7 @@ OpenCore版本：1.0.2
 
 ## 截图
 
-原作者截图
+原作者截图  
 ![image](https://raw.githubusercontent.com/dh374374/Air14-2020-hackintosh-Opencore-EFI/main/img/WX20231022-153038.png)
 ![image](https://raw.githubusercontent.com/dh374374/Air14-2020-hackintosh-Opencore-EFI/main/img/WX20231022-153136.png)
 
