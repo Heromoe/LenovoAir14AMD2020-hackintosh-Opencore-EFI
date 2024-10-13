@@ -1,4 +1,6 @@
-# **小新Air14 2020锐龙版 黑苹果EFI**
+# **联想小新Air14 2020锐龙版 黑苹果EFI**
+
+在原项目 https://github.com/dh374374/Air14-2020-hackintosh-Opencore-EFI 的基础上稍微改了改+升级OC和kext，感谢
 
 ## 可用系统
 
@@ -8,29 +10,33 @@
 
 | 配件 | 型号 |
 | --- | --- |
-| cpu | AMD Ryzen 5 4600U |
-| 内存 | 8G x 2 |
-| 显卡 | AMD Radeon(TM) Graphics ( 2GB / 联想 ) |
-| 硬盘 | 西数 WDC PC SN730 SDBPNTY-512G-1101 ( 512GB) |
-| 网卡 | 英特尔 Intel Wi-Fi 6E AX210 160MHz 【自己换的】 |
+| CPU | AMD Ryzen 5 4600U |
+| 内存 | 8G x 2 「板载」 |
+| 显卡 | 核显 |
+| 硬盘 | 镁光 2300 MTFDHBA512TDV (512GB) 「自己换的」 |
+| 网卡 | 英特尔 Intel Wi-Fi 8265NGW 「自己换的」 |
 
 ## **安装前准备**
 
-1. bios关闭安全启动 disable secure boot
-2. 安装之前把下载的efi文件里的EFI\OC文件夹下的配置文件config.plist的“NootedRed.kext”禁用，安装好了之后再开启
-3. 可以使用 [UMAF](https://github.com/DavidS95/Smokeless_UMAF) 增加显存（可选，不加也可用）
-4. 不同型号的电脑可能需要自己定制UTBMap.kext，参考链接如下：[usb定制](https://apple.sqlsec.com/6-%E5%AE%9E%E7%94%A8%E5%A7%BF%E5%8A%BF/6-1.html)
+1. 原本搭载的螃蟹网卡无法驱动，必须自行更换网卡。建议更换博通网卡以支持AirDrop等功能，至少也要更换英特尔网卡（[兼容型号列表](https://openintelwireless.github.io/itlwm/Compat)）。
+2. 如你用博通网卡，自行禁用EFI\OC文件夹下的配置文件config.plist的“AirportItlwm.kext"，"IntelBluetoothFirmware.kext"，"IntelBTPatcher.kext"。
+3. 如你用英特尔网卡，macOS 14.4以上和以下的网卡驱动不同，注意[itlwm驱动](https://github.com/OpenIntelWireless/itlwm)的版本。
+4. 部分批次的幸运儿（比如我）搭载三星PM981a硬盘会导致内核恐慌，无法使用必须自行更换硬盘。SATA任意品牌及NVME西数和闪迪全系列兼容性最佳，其他看[兼容性参考链接1](https://apple.sqlsec.com/1-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/1-2/#_2)，[兼容性参考链接2](https://macoshome.com/hackintosh/hcourse/2476.html)，[兼容性参考链接3](https://heipg.cn/tutorial/diy-hackintosh-2020.html)。如你更换了SATA协议的硬盘，自行禁用EFI\OC文件夹下的配置文件config.plist的“NVMeFix.kext”
+5. bios必须关闭安全启动 disable secure boot（但可能会导致Windows下指纹出现问题）。
+6. 安装之前把EFI\OC文件夹下的配置文件config.plist的“NootedRed.kext”禁用，安装好进桌面之后再开启。
+7. 可以使用 [UMAF](https://github.com/DavidS95/Smokeless_UMAF) 增加显存（可选，不加也可用）
 
 ## **存在的问题**
 
-1. 安装完成后，chrome浏览器需要关闭硬件加速，不然会卡的怀疑人生，需要等[NootedRed](https://github.com/ChefKissInc/NootedRed)作者解决
-2. 风扇转速没法控制
-3. 原本的螃蟹网卡无法驱动，请自行更换适合的网卡，比如AX200、AX210等
+1. Chrome浏览器必须进设置关闭硬件加速，不然会卡的怀疑人生，核显驱动问题需要等[NootedRed](https://github.com/ChefKissInc/NootedRed)解决。Safari正常
+2. VDA解码器不支持
 
 ## 截图
 
+原作者截图
 ![image](https://raw.githubusercontent.com/dh374374/Air14-2020-hackintosh-Opencore-EFI/main/img/WX20231022-153038.png)
 ![image](https://raw.githubusercontent.com/dh374374/Air14-2020-hackintosh-Opencore-EFI/main/img/WX20231022-153136.png)
+
 
 ---
 
@@ -39,3 +45,6 @@
 https://github.com/longluuly/Ryzentosh-Acer-aspire-7-A715-42G-R6ZR-Opencore-EFI
 
 https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh/blob/main/README_cn.md
+
+---
+(日本DIY市场过于费拉不堪，网卡找不到二手博通的，全新SSD卖出天价，WD蓝盘500g人民币400，比这便宜的全是无缓+QLC。二手WD更是几乎没人出 全是三星和其他的OEM。服了，只能凑合凑合)
