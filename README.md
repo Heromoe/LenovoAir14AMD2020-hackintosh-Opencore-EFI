@@ -52,4 +52,4 @@ https://github.com/longluuly/Ryzentosh-Acer-aspire-7-A715-42G-R6ZR-Opencore-EFI
 https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh/blob/main/README_cn.md
 
 ---
-(你问我为什么硬盘+网卡换这两个垃圾？日本DIY市场过于费拉不堪，网卡找不到二手博通的，全新SSD卖出天价，WD蓝盘500g人民币400，比这便宜的全是无缓+QLC。二手WD更是几乎没人出 全是三星和其他的OEM。服了，只能凑合凑合)
+(我为什么硬盘+网卡换这两个垃圾？日本DIY市场过于费拉不堪，网卡找不到二手博通的，全新SSD卖出天价。WD蓝盘500g人民币400，比这便宜的全是无缓+QLC，只能凑合凑合...)
