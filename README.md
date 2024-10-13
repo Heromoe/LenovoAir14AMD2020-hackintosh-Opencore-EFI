@@ -25,15 +25,16 @@
 1. 原本搭载的螃蟹网卡无法驱动，必须自行更换网卡。建议更换博通网卡以支持AirDrop等功能，至少也要更换英特尔网卡（[兼容型号列表](https://openintelwireless.github.io/itlwm/Compat)）。
 2. 如你用博通网卡，自行禁用EFI\OC文件夹下的配置文件config.plist的“AirportItlwm.kext"，"IntelBluetoothFirmware.kext"，"IntelBTPatcher.kext"。
 3. 如你用英特尔网卡，注意本项目默认带的是macOS 14.4以上的驱动，想装低于此版本系统 必须前往[itlwm驱动](https://github.com/OpenIntelWireless/itlwm)下载对应版本AirportItlwm.kext覆盖。
-4. 部分批次的幸运儿（比如我）搭载三星PM981a硬盘会导致内核恐慌，无法使用必须自行更换硬盘。SATA任意品牌及NVME西数和闪迪全系列兼容性最佳，其他看[兼容性参考链接1](https://apple.sqlsec.com/1-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/1-2/#_2)，[兼容性参考链接2](https://macoshome.com/hackintosh/hcourse/2476.html)，[兼容性参考链接3](https://heipg.cn/tutorial/diy-hackintosh-2020.html)。如你更换了SATA协议的硬盘，自行禁用EFI\OC文件夹下的配置文件config.plist的“NVMeFix.kext”
+4. 部分批次的幸运儿（比如我）搭载三星PM981a硬盘会导致内核恐慌，无法使用必须自行更换硬盘。SATA任意品牌及NVME西数和闪迪全系列兼容性最佳，其他看[兼容性参考链接1](https://apple.sqlsec.com/1-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/1-2/#_2)，[兼容性参考链接2](https://macoshome.com/hackintosh/hcourse/2476.html)，[兼容性参考链接3](https://heipg.cn/tutorial/diy-hackintosh-2020.html)。如你更换了SATA协议的硬盘，自行禁用EFI\OC文件夹下的配置文件config.plist的“NVMeFix.kext”。
 5. bios必须关闭安全启动 disable secure boot。
-6. 安装之前把EFI\OC文件夹下的配置文件config.plist的“NootedRed.kext”禁用，安装好进桌面之后再开启。已做了个禁用的配置文件改个名覆盖就行，但还是建议自己改
-7. 可以使用 [UMAF](https://github.com/DavidS95/Smokeless_UMAF) 增加显存（可选，不加也可用）
+6. 安装之前把EFI\OC文件夹下的配置文件config.plist的“NootedRed.kext”禁用，安装好进桌面之后再开启。已做了个禁用的配置文件，改个名覆盖就行，但还是建议自己改。
+7. 可以使用 [UMAF](https://github.com/DavidS95/Smokeless_UMAF) 增加显存（可选，不加也可用）。
 
 ## **存在的问题**
 
-1. Chrome浏览器必须进设置关闭硬件加速，不然会卡的怀疑人生，核显驱动问题需要等[NootedRed](https://github.com/ChefKissInc/NootedRed)解决。Safari正常
-2. VDA解码器不支持
+1. 由于AMD核显驱动问题，Chrome浏览器必须进设置→系统关闭图形加速，不然会卡的怀疑人生，Safari正常。需要等[NootedRed](https://github.com/ChefKissInc/NootedRed)解决。其他一些软件也可能出现兼容性问题。
+2. VDA解码器不支持。
+3. 无法自定义风扇转速。
 
 ## 截图
 
