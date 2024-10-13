@@ -43,7 +43,8 @@
 ![image](https://raw.githubusercontent.com/dh374374/Air14-2020-hackintosh-Opencore-EFI/main/img/WX20231022-153038.png)
 ![image](https://raw.githubusercontent.com/dh374374/Air14-2020-hackintosh-Opencore-EFI/main/img/WX20231022-153136.png)
 
-
+---  
+一切正常且好用的话，就点个star吧~
 ---
 
 ## 致谢，参考了
